@@ -342,6 +342,7 @@ a .navbaritems :hover{
 }
 
 /*Media Queries*/
+
 @media (max-width: 767px) {
 
     .navbarcontent {
