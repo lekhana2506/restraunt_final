@@ -356,6 +356,8 @@ a .navbaritems :hover{
     .navbarlogo h1{
         font-size: 1.5rem;
     }
+
+
     
     .orderbutton button {
         font-size: 0.7rem;
@@ -425,7 +427,7 @@ a .navbaritems :hover{
     }
 
     .box1 {
-        height: 80%;
+        height:100%;
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -433,7 +435,7 @@ a .navbaritems :hover{
 
     .right1 {
         width: 100%;
-        height:20%;
+        height:100%;
         background-color: rgba(0, 0, 0, 0);
         display: flex;
         justify-content: center;
@@ -443,6 +445,7 @@ a .navbaritems :hover{
         margin-bottom: 10px;
         margin-top:10px;
     }
+
     .right1 p{
         display: none;
     }
@@ -454,7 +457,7 @@ a .navbaritems :hover{
         padding-bottom: 0;
     }
     .left1 img{
-        width:90%;
+        width:100%;
         height:auto;
         padding: 0;
         margin: 0;
@@ -528,6 +531,19 @@ a .navbaritems :hover{
     .navbaritems{
         display: none;
     }
+
+    .right1 p{
+        font-size: 0.7rem;
+    }
+
+    .right1 h3{
+        font-size: 0.8rem;
+        margin-top: 0;
+    }
+    .right1{
+        background-color: rgba(0, 0, 0, 0);
+        
+    }
 }
 
 /* Tablets: 768px to 1024px */
@@ -566,6 +582,18 @@ a .navbaritems :hover{
 
     .box2 {
         flex: 1 1 50%;
+    }
+
+    .right1 p{
+        font-size: 0.7rem;
+    }
+
+    .right1 h3{
+        font-size: 0.8rem;
+    }
+
+    .right1{
+        background-color: rgba(0, 0, 0, 0);
     }
 }
 
