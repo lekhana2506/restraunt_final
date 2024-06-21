@@ -104,3 +104,28 @@ a{
 a .navbaritems :hover{
     color: rgb(222, 222, 11);
 }
+
+@media (max-width: 767px) {
+
+    .navbarcontent {
+        height: 70px;
+        padding: 0 10px;
+    }
+    
+    .navbaritems {
+        display: none;
+        
+    }
+    .navbarlogo h1{
+        font-size: 1.5rem;
+    }
+    
+    .orderbutton button {
+        font-size: 0.7rem;
+        font-weight: 400;
+        color: white;
+        border: 0.5px solid white;
+        background-color: rgba(255, 255, 255, 0.011);
+        padding: 5px 10px;
+    }
+}
