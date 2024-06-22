@@ -132,7 +132,6 @@ a .navbaritems :hover{
     .navbarcontent {
         height: 70px;
         padding: 0 10px;
-        z-index: 10;
     }
 
     .navbarlogo h1 {
@@ -142,8 +141,6 @@ a .navbaritems :hover{
     .hamburger {
         display: flex;
         z-index: 10;
-        position: fixed;
-        right:3%;
     }
 
     .navbaritems,
@@ -151,19 +148,18 @@ a .navbaritems :hover{
         position: fixed;
         left: -100%;
         top:1px;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        display: block;
         background-color: rgba(0, 0, 0, 0.8);
         width: 100%;
         text-align: center;
         transition: 0.3s;
-        z-index: 10;
+        z-index:10;
     }
 
     .navbaritems li,
     .orderbutton {
         margin: 15px 0;
+        font-size:0.8rem;
     }
 
     .navbaritems li {
