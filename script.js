@@ -20,3 +20,11 @@ window.addEventListener("scroll", function() {
         navbar.style.backgroundColor = originalBackgroundColor;
     }
 });
+
+var serivcesbutton=document.querySelector("li.servicebutton");
+var services=document.querySelector(".services");
+
+serivcesbutton.addEventListener("click",function(){
+    services.scrollIntoView({"behavior":"smooth"});
+
+});
