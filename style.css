@@ -10,6 +10,12 @@ body, html {
     height: 100%;
 }
 
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
 .navbarcontent {
     position: fixed;
     top: 0;
@@ -18,7 +24,7 @@ body, html {
     height: 100px;
     display: flex;
     flex-wrap: wrap;
-    flex:1;
+    flex: 1;
     justify-content: space-between;
     align-items: center;
     z-index: 10;
@@ -45,12 +51,43 @@ body, html {
     list-style: none;
 }
 
+.navbaritems li  {
+    color: white;
+    text-decoration: none;
+}
+
 .orderbutton button {
     font-weight: 500;
     color: white;
     border: 0.5px solid white;
     background-color: rgba(255, 255, 255, 0.011);
     padding: 10px 20px;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+}
+
+.hamburger .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+    transition: 0.3s;
+}
+
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(3) {
+    transform: translateY(-14px) rotate(-45deg);
 }
 
 .background-image {
@@ -342,33 +379,52 @@ a .navbaritems :hover{
 }
 
 /*Media Queries*/
-
-@media (max-width: 767px) {
-
+@media (max-width: 960px) {
     .navbarcontent {
         height: 70px;
         padding: 0 10px;
     }
-    
-    .navbaritems {
-        display: none;
-        
-    }
-    .navbarlogo h1{
+
+    .navbarlogo h1 {
         font-size: 1.5rem;
     }
 
-
-    
-    .orderbutton button {
-        font-size: 0.7rem;
-        font-weight: 400;
-        color: white;
-        border: 0.5px solid white;
-        background-color: rgba(255, 255, 255, 0.011);
-        padding: 5px 10px;
+    .hamburger {
+        display: block;
     }
 
+    .navbaritems,
+    .orderbutton {
+        position: fixed;
+        left: -100%;
+        top:1px;
+        display: block;
+        background-color: rgba(0, 0, 0, 0.8);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+    }
+
+    .navbaritems li,
+    .orderbutton {
+        margin: 15px 0;
+    }
+
+    .navbaritems li {
+        width: 100%; /* Ensure li elements take full width in mobile view */
+    }
+
+    .navbaritems li a {
+        display: block; /* Ensure anchor tags take full width in mobile view */
+        padding: 10px 0; /* Add padding for better click area */
+    }
+
+    .navbaritems.active,
+    .orderbutton.active {
+        left: 0;
+    }
+}
+@media (max-width: 767px) {
     .image-content h1 {
         font-size: 1.5rem;
     }
@@ -529,9 +585,6 @@ a .navbaritems :hover{
 }
 
 @media (min-width: 768px) and (max-width: 900px) {
-    .navbaritems{
-        display: none;
-    }
 
     .right1 p{
         font-size: 0.7rem;
