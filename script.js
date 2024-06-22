@@ -9,3 +9,14 @@ document.addEventListener("DOMContentLoaded", () => {
         orderbutton.classList.toggle("active");
     });
 });
+
+var navbar = document.querySelector(".navbarcontent");
+var originalBackgroundColor = window.getComputedStyle(navbar).backgroundColor;
+
+window.addEventListener("scroll", function() {
+    if (window.scrollY > 0) {
+        navbar.style.backgroundColor = "black";
+    } else {
+        navbar.style.backgroundColor = originalBackgroundColor;
+    }
+});
