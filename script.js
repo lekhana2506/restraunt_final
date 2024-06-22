@@ -28,3 +28,4 @@ serivcesbutton.addEventListener("click",function(){
     services.scrollIntoView({"behavior":"smooth"});
 
 });
+
